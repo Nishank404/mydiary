@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+            background-color: rgb(245, 247, 249);
+            
+        }
+        #up{ margin-top: 0;
+            font-family: 'nunito', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 150px;
+
+        }
+        #my{
+            margin: 0;
+
+        }
+        #square{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            
+            height: 300px;
+            width: 300px;
+            gap: 34px;
+            border: 1px solid rgb(213, 236, 235);
+
+        }
+        #please{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .input{
+            background-color: rgb(255, 255, 255);
+            height: 30px;
+            border:1px solid rgb(102, 102, 102);
+
+        }
+        #submit{
+            height:50px;
+            background-color: rgb(18, 172, 233);
+            border: 1px solid black;
+            color: white
+        }
+        
+    </style>
+</head>
+<body>
+    
+      <div id="up"><h1 id="my">My diary</h1>
+      </div>
+      <div id="container">  
+      <div id="square">
+        
+        <p id="please">Please enter your details</p>
+        <input type="email" placeholder="Email" class="input">
+        <input type="password" placeholder="Password" class="input">
+        <input id="submit" type="submit">
+
+
+
+
+      </div>
+    </div>  
+    
+</body>
+</html>
