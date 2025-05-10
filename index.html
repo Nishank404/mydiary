@@ -6,12 +6,13 @@
     <title>login</title>
     <style>
         body{
-            background-color: rgb(245, 247, 249);
+            background-color: rgb(255, 225, 224);
             
         }
         #up{ margin-top: 0;
             font-family: 'nunito', 'Arial Narrow', Arial, sans-serif;
             margin-bottom: 150px;
+            color: rgb(127, 85, 177);
 
         }
         #my{
@@ -19,10 +20,11 @@
 
         }
         #square{
-            background-color: white;
+            background-color: rgb(244, 155, 171);
             display: flex;
             flex-direction: column;
             padding: 20px;
+            filter: drop-shadow(10px 10px 2px #bcbcff);
             
             height: 300px;
             width: 300px;
@@ -33,6 +35,7 @@
         #please{
             font-family: 'Times New Roman', Times, serif;
             font-size: 30px;
+            color: rgb(127, 85, 177);
         }
         #container{
             display: flex;
@@ -63,15 +66,37 @@
       <div id="square">
         
         <p id="please">Please enter your details</p>
-        <input type="email" placeholder="Email" class="input">
-        <input type="password" placeholder="Password" class="input">
-        <input id="submit" type="submit">
+        <input id="username" placeholder="username" class="input">
+        <input id="password" placeholder="Password" class="input">
+        <button onclick="login()" id="submit">Login</button>
 
 
 
 
       </div>
     </div>  
+    
+  <script>
+    // Friends' credentials
+    const users = {
+      "admin": { password: "admin", page: "main.html" },
+      
+      // Add more friends here
+    };
+
+    function login() {
+      const uname = document.getElementById("username").value.toLowerCase();
+      const pword = document.getElementById("password").value;
+      const errorDiv = document.getElementById("error");
+
+      if (users[uname] && users[uname].password === pword) {
+        window.location.href = users[uname].page;
+      } else {
+        errorDiv.textContent = "Incorrect username or password!";
+      }
+    }
+  </script>
+
     
 </body>
 </html>
