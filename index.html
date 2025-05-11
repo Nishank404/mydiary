@@ -35,6 +35,7 @@
         #please{
             font-family: 'Times New Roman', Times, serif;
             font-size: 30px;
+            height: 10px;
             color: rgb(127, 85, 177);
         }
         #container{
@@ -51,14 +52,15 @@
         }
         #submit{
             height:50px;
-            background-color: rgb(18, 172, 233);
+            background-color: rgba(18, 172, 233, 0.8);
             border: 1px solid black;
             color: white
         }
         #submit:hover{
-            background-color: rgb(0, 0, 0);
+            background-color: rgba(18, 172, 233, 1);
             color: white;
             cursor: pointer;
+            position: relative;
         }
         
     </style>
@@ -74,7 +76,7 @@
         <input id="username" placeholder="username" class="input">
         <input id="password" placeholder="Password" class="input">
         <button onclick="login()" id="submit">Login</button>
-        devnish og
+        
 
 
 
